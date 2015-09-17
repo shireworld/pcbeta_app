@@ -3,6 +3,7 @@ package com.yuikya.pcbeta.app.parser;
 import android.util.Log;
 
 import com.yuikya.pcbeta.app.model.Post;
+import com.yuikya.pcbeta.app.util.OkHttpClientManager;
 import com.yuikya.pcbeta.app.util.OkHttpUtil;
 
 import org.jsoup.Jsoup;
@@ -22,7 +23,8 @@ public class PostListParser {
     public List<Post> getPostList(String url) {
         List<Post> postList = new ArrayList<>();
         try {
-            Document doc = Jsoup.parse(OkHttpUtil.getStringFromServer(url));
+            //Document doc = Jsoup.parse(OkHttpUtil.getStringFromServer(url));
+            Document doc = Jsoup.parse(OkHttpClientManager.getInstance().getGetDelegate().getAsString(url));
             Elements elements = doc.select("[id^=normalthread]");
             for (Element element : elements) {
                 String id = elements.attr("id").split("_")[1];

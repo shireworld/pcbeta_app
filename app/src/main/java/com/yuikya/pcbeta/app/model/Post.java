@@ -1,9 +1,12 @@
 package com.yuikya.pcbeta.app.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by fan on 2015/9/16.
  */
-public class Post {
+public class Post implements Serializable {
 
     private String id;
     private String title;
@@ -15,6 +18,7 @@ public class Post {
     private int viewCount;
     private int replyCount;
     private String type;
+    private List<PostDetail> details;
 
     public String getId() {
         return id;
@@ -94,5 +98,13 @@ public class Post {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public List<PostDetail> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<PostDetail> details) {
+        this.details = details;
     }
 }
