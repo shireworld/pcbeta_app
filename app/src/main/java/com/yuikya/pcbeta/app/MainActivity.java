@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.yuikya.pcbeta.app.adapter.PostRecyclerAdapter;
 import com.yuikya.pcbeta.app.model.Post;
 import com.yuikya.pcbeta.app.parser.PostListParser;
+import com.yuikya.pcbeta.app.widget.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         mRecyclerView = (RecyclerView) findViewById(R.id.post_recyclerview);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.post_swipe);
         mRecyclerView.setHasFixedSize(false);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL_LIST));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new PostRecyclerAdapter(MainActivity.this,mList);
         mRecyclerView.setAdapter(mAdapter);
