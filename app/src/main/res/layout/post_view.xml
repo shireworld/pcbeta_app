@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/post_title_tv"
+        android:layout_toLeftOf="@+id/post_comment_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/primary_text"
+        android:text="求真正滴WIN10 X86 OEM 专业版ISO或ESD"
+        />
+
+    <TextView
+        android:id="@+id/post_author_tv"
+        android:layout_below="@id/post_title_tv"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:text="ahifdk"/>
+
+    <TextView
+        android:id="@+id/post_pubtime_tv"
+        android:layout_below="@+id/post_author_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:text="2015-8-12"
+        />
+
+    <TextView
+        android:id="@+id/post_replyman_tv"
+        android:layout_below="@id/post_title_tv"
+        android:layout_alignBaseline="@id/post_author_tv"
+        android:layout_toLeftOf="@+id/post_comment_lin"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:text="ahifdk"/>
+
+    <TextView
+        android:id="@+id/post_replytime_tv"
+        android:layout_below="@+id/post_replyman_tv"
+        android:layout_toLeftOf="@+id/post_comment_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:text="2015-8-12"
+        />
+
+    <LinearLayout
+        android:id="@+id/post_comment_lin"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/post_comment_iv"
+            android:src="@drawable/ic_action_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/post_commentcount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:text="345"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
