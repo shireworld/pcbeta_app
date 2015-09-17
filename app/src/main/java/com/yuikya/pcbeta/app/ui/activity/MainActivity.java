@@ -1,4 +1,4 @@
-package com.yuikya.pcbeta.app;
+package com.yuikya.pcbeta.app.ui.activity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,10 +10,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.yuikya.pcbeta.app.R;
 import com.yuikya.pcbeta.app.adapter.PostRecyclerAdapter;
 import com.yuikya.pcbeta.app.model.Post;
 import com.yuikya.pcbeta.app.parser.PostListParser;
-import com.yuikya.pcbeta.app.widget.DividerItemDecoration;
+import com.yuikya.pcbeta.app.ui.widget.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,4 +111,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             mSwipeRefreshLayout.setRefreshing(false);
         }
     }
+
+
+
 }

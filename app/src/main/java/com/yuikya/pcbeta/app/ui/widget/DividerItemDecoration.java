@@ -15,7 +15,7 @@
  */
 
 
-package com.yuikya.pcbeta.app.widget;
+package com.yuikya.pcbeta.app.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
